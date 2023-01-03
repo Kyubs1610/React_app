@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const List = () => {
     const initialTodos =["Learn React","Take a coffee"];
-    const [todos] = useState(initialTodos);
+    const [todos, setTodos] = useState(initialTodos);
     return(
     <section> 
     <h2 className='secondTitle'>Todos</h2>
