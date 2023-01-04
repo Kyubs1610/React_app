@@ -20,6 +20,7 @@ const Input = ({ setTodos }) => {
         <input ref={inputRef} type ='text' placeholder="Type a new todo"></input>
         <button className="submit" onClick={clickHandler}> Add Todo</button>
       </div>
+      &nbsp;
       <hr className="line"></hr>
       
     </section>
