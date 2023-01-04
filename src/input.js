@@ -1,14 +1,16 @@
 import './App.css';
-import React, { useRef} from "react";
+import React, {useRef} from "react";
+import { v4 as uuidv4 } from "uuid";
 
-const Input = ({ todos, setTodos }) => {
+const Input = ({ setTodos }) => {
     const inputRef = useRef();
     
     function clickHandler(){
       const inputElement = inputRef.current.value;
       if (inputElement === '') return;
+      console.log("Adding todo:", inputElement);
       setTodos(prevTodos => {
-        return[...prevTodos,{id:1, inputElement:inputElement, complete:false}]
+        return[...prevTodos,{id:uuidv4(), inputElement:inputElement, complete:false}]
       });
   }
   
