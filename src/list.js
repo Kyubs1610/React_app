@@ -1,15 +1,13 @@
 import './App.css';
-import React, { useState } from "react";
+import React from "react";
 
-const List = () => {
-    const initialTodos =["Learn React","Take a coffee"];
-    const [todos, setTodos] = useState(initialTodos);
+const List = ({todos}) => {
     return(
     <section> 
     <h2 className='secondTitle'>Todos</h2>
     <ul>
     {todos.map((todo,index) => (
-      <li key={index}> <input type="checkbox" /> {todo}</li>
+      <li key={index}> <input type="checkbox" /> {todo.inputElement}</li>
     ))}
     </ul>
     </section>

@@ -1,16 +1,17 @@
 import './App.css';
-import React, { useRef } from "react";
-// import uuidv4 from 'uuid/v4'
+import React, { useRef} from "react";
 
-const Input = () => {
+const Input = ({ todos, setTodos }) => {
     const inputRef = useRef();
-    function clickHandler(){
-        const inputElement = inputRef.current;
-
-        // Do something with inputElement...
-        console.log(inputElement.value);
     
-    }
+    function clickHandler(){
+      const inputElement = inputRef.current.value;
+      if (inputElement === '') return;
+      setTodos(prevTodos => {
+        return[...prevTodos,{id:1, inputElement:inputElement, complete:false}]
+      });
+  }
+  
     return( 
     <section> 
      <div className ="inputbtn">

@@ -2,14 +2,16 @@ import './App.css';
 import Input from "./input.js"
 import Header from './header.js';
 import List from "./list.js"
+import React, {useState } from 'react';
 
+function App ()  {
+  const [todos, setTodos] = useState([]);
 
-const App = () => {
-  return (
+    return (
     <div>
       <Header />
-      <Input />
-      <List />
+      <Input todos={todos} setTodos={setTodos}/>
+      <List todos={todos} />
     </div>
   );
 };
