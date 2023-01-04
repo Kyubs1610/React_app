@@ -12,7 +12,7 @@ const List = ({todos,setTodos}) => {
   }
     return(
     <section> 
-    <h2 className='secondTitle'>Todos</h2>
+    <h2 className='secondTitle'>Task</h2>
     <ul>
     {todos.map((todo,index) => (
       <li key={index}> <input type="checkbox" /> &nbsp; {todo.inputElement}  &nbsp;
