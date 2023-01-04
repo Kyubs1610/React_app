@@ -17,8 +17,8 @@ const Input = ({ setTodos }) => {
     return( 
     <section> 
      <div className ="inputbtn">
-        <input ref={inputRef} type ='text' placeholder="Type a new todo"></input>
-        <button className="submit" onClick={clickHandler}> Add Todo</button>
+        <input ref={inputRef} type ='text' placeholder="Type a new task"></input>
+        <button className="submit" onClick={clickHandler}> Add Task</button>
       </div>
       &nbsp;
       <hr className="line"></hr>
